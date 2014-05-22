@@ -74,7 +74,7 @@ tidy<-dcast(newdatamelt, subact ~ variable, mean)
 names(tidy)<-gsub("-", "", names(tidy))
 names(tidy)<-gsub("\\(\\)", "", names(tidy))
 
-#export the tidy dataset to a txt file
+#export the tidy dataset to a txt file or an excel file
 write.table(tidy, "tidy.txt", sep=",")
 library(xlsx)
 write.xlsx(tidy, "tidy.xlsx")
